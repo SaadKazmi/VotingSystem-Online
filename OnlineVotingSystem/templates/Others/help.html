@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="{% static 'Others/help_styles.css'%}">    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  
+  <style>
+         @media screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            .navbar {
+                position: relative;
+            }
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+        .navbar a
+        {
+         float: left;
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 20px;
+         text-decoration: none;
+
+        }
+    .navbar a:hover 
+    {
+        background-color: #ddd;
+        color: black;
+    } 
+    .navbar .right-text 
+    {
+        float: right;
+        padding: 5px 10px;
+        font-size:16px;
+    }
+    .navbar .left-text 
+    {
+        float: left;
+        padding: 20px 15px;
+        font-size:16px;
+        color:#fff;
+    }
+  
+    .hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+  
+        .visible {
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        body {
+            padding-top: 60px;
+        }
+  </style>
+  
+  <body>
+  
+  <div class="navbar">
+    <div class="right-text">
+      <a href="{% url 'home' %}">HOME</a>
+      <a href="{% url 'help' %}">HELP</a>
+      <a href="{% url 'contact' %}">CONTACT</a>
+    </div>
+    <div class="left-text">
+        Online Voting System
+    </div>
+  </div>
+ <!-- FAQ Section -->
+<div class="wrapper">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+        <button class="accordion">
+            What is the Online Voting System?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                The Online Voting System is a digital platform designed to facilitate voting processes using
+                electronic methods over the internet.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            How secure is the Online Voting System?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                The security of the Online Voting System is paramount. It employs robust encryption techniques and
+                strict authentication protocols to ensure a secure and reliable voting experience for users.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            Can I change my vote once it's submitted?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                No, once a vote is submitted in the Online Voting System, it cannot be altered or changed to maintain
+                the integrity and fairness of the voting process.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            How are identities verified in the Online Voting System?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                The Online Voting System verifies identities using secure authentication methods, which may include
+                unique login credentials or other verification factors to ensure the legitimacy of voters.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            Is the Online Voting System accessible to all users?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                Yes, the Online Voting System is designed to be accessible and user-friendly for all eligible voters,
+                ensuring inclusivity and ease of use.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            How are results calculated and secured in the Online Voting System?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+            <p>
+                Results in the Online Voting System are calculated using secure algorithms and encryption methods.
+                Additionally, stringent measures are implemented to ensure the confidentiality and integrity of the
+                results.
+            </p>
+        </div>
+    </div>
+
+    <!-- Add more FAQs as needed -->
+
+</div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
