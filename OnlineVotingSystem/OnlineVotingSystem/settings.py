@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'OVSdb',
         'USER': 'postgres',
-        'PASSWORD': 'saad',
+        'PASSWORD': #add your own
         'HOST': 'localhost',  
         'PORT': '5432',          
     }
@@ -138,9 +138,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'l215252@lhr.nu.edu.pk'  # Your Gmail email address
-EMAIL_HOST_PASSWORD = '@!25Saad25!@'  # Your Gmail password or app-specific password
-DEFAULT_FROM_EMAIL = 'l215252@lhr.nu.edu.pk'  # Configure this
+EMAIL_HOST_USER =   # Your Gmail email address
+EMAIL_HOST_PASSWORD = # Your Gmail password or app-specific password
+DEFAULT_FROM_EMAIL =  # Configure this
 
 JAZZMIN_UI_TWEAKS = {
     "theme": "darkly",
